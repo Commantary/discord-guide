@@ -1,0 +1,60 @@
+
+.codeText2 {
+    /*background-color: black;*/
+    width: 90%;
+    text-align: left;
+    margin-top: -28px;
+}
+
+.code1 {
+    border-radius: 5px;
+    height: 30px;
+    line-height: 10px;
+    font-weight: 100px;
+}
+
+h1 {
+    font-family: sans-serif
+}
+
+body {
+    background-color: #AAB7B8;
+}
+
+h2 {
+    font-family: sans-serif
+}
+
+a {
+    text-decoration: underline;
+    color: white
+}
+
+
+
+p {
+    margin-top: -10px;
+    font-family: "Arial", sans-serif;
+    font-size: 19px;
+}
+
+
+
+.codeText1 {
+    width: 90%;
+    text-align: left;
+    margin-top: -28px;
+}
+
+
+
+
+
+.secondBody {
+    text-align: left;
+    width: 90%;
+}
+
+.code2 {
+    border-radius: 5px;
+}
