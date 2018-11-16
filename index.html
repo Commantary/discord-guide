@@ -1,19 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 	<title>Discord Guide</title>
 	<link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/hybrid.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
-<center>
-    <h1>DISCORD.JS GUIDE</h1>
-    <h2>Pour commencer :</h2>
+<div class="body-div">
+<div class="nav-div">
+    <ul class="nav-ul">
+        <br>
+      <li class="title-anv"><span><a id="title-anv" href="#creation-du-bot">Discord.JS Guide</a></span>
+        <hr width="120">
+        <br>
+      <li><span onclick="myFunction(#mise-en-place)"><a class="nav-a-select">Mise en place</a></span></li>
+        <hr class="nav-hr">
+      <li><span onclick="myFunction(#creation-du-bot)"><a class="nav-a-select">Création du bot</a></span></li>
+        <hr class="nav-hr">
+      <li><span onclick="myFunction(#permission)"><a class="nav-a-select">Permissions</a></span></li>
+    </ul>
+</div>
+    <scroll-container>
     
     <div class="secondBody">
+    <h1 id="header">DISCORD.JS GUIDE</h1>
+    <h2 id="commencer">Pour commencer :</h2>
+    <scroll-page id="mise-en-place"><h3>Mise en place:</h3></scroll-page>
     <p>Pour commencer vous devez installer <a href="https://nodejs.org/en/">NodeJS</a> il vous suffit de suivre les instructions sur le site.<br>Vous aurez besoin d'un logiciel pour programmer tel que <a href="https://www.sublimetext.com/">Sublime Text</a> , <a href="https://atom.io/">Atom</a> , <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
     <br>
     <p>Créer un dossier <strong>/bot-discord</strong> ou vous pouvez l'appeller comme vous voulez, ce sera le dossier qui contient le bot discord.<br>Lancez un CMD en faisant <strong>SHIFT + Clic Droit </strong>lancer un terminal<br><br>Faites:</p>
@@ -41,10 +57,43 @@ tapez yes et pressez entrer
             </code>
         </pre>
     </div>
-    <p>Bravo ! Vous venez de créez votre bot ! Il nous manque encore quelques étapes simple...</p>
+    <scroll-page id="creation-du-bot"><h3>Création du bot:</h3></scroll-page>
+    <p>Nous avons notre espace pour notre bot il nous manque plus qu'a le créer et pour cela vous devez vous rendre sur le site de <a href="">Discord</a> et aller dans le portail <a href="https://discordapp.com/developers/applications/">développeur</a>. Créez une application.</p>
+    <img class="create-new-app" src="/images/create-new-app.PNG" alt="create-app" height="200"/>
+    <p><br>Donnez lui le nom que vous voulez, dans le cadre du guide l'application s'appelle <strong>discord-guide.</strong></p>
+     <img class="name-app" src="/images/name-app.PNG" alt="name-app" height="80"/>
+    <p>Nous avons besoin de copier-coller le <strong>client ID</strong> mettez le dans un bloc-note quelques part sur votre bureau.</p>
+    <img class="client-id-app" src="images/client-id-app.PNG" alt="client-id">
+    <div class="icone-bot">
+        <span><br>Ensuite cliquez sur l'icone Bot <br></span>
+        <br>
+        <img class="icone-bot-app" src="/images/bot-icon.PNG" alt="bot-icon-app">
     </div>
+    <p class="after-icone-bot-p">Appuyez ensuite sur le bouton <strong>Add Bot</strong> (rajouter un bot) et confirmer. Maintenant vous pouvez choisir le nom que vous voulez donner a votre bot discord, nous l'appellerons <strong>discord guide</strong> mettez lui un logo si vous le souhaitez.</p>
+    <img class="name-bot-app" src="/images/name-bot-app.PNG" alt="bot-icon-app">
+    <p>On aura besoin du token du bot donc vous devriez cliquez sur le bouton pour révéler le token du bot.</p>
+    <img class="token-reveal-bot" src="/images/token-reveal-bot.PNG" alt="token-not-reveal">
+    <p>Ce qui nous donnez une suite de chose bizarre mais ne soyez pas perdu ! Pas besoin de comprendre ce que sa signifie il faut juste le <br>copier-coller quelque part.</p>
+    <img class="token-bot" src="/images/token-bot.PNG" alt="token-reveal">
+    <h3 id="permissions-bot">Permissions du bot :</h3>
+    <p>Maintenant il faut inviter le bot discord sur notre serveur discord, il y a une nouvelle fonctionnalité qui nous permer de calculer les permissions directement sur la page du bot sa ressemble a cela.</p>
+    <img class="bot-permission-app" src="images/bot-permissions-app.PNG" width="700" alt="bot-permission">
+    <p>Vous devez juste cliquer sur les permissions qu'il vous faut pour votre bot, pour le guide je sélectionne juste <strong>Administrateur</strong> qui résulte en un <strong>8</strong>. Pour rajouter votre bot a votre serveur discord vous devez éditer ce lien <a class="" href="https://discordapp.com/oauth2/authorize?client_id=ID_DU_BOT&scope=bot&permissions=NOMBRE_DES_PERMISSIONS">https://discordapp.com/oauth2/authorize?client_id=ID_DU_BOT&scope=bot&permissions=NOMBRE_DES_PERMISSIONS</a><br>Tel que <i>https://discordapp.com/oauth2/authorize?client_id=512981872603561984&scope=bot&permissions=8</i> qui sera le lien pour inviter mon bot, vous devriez juste mettre votre client ID et votre nombre de permissions. Simple non ? </p>
+    </div>
+</scroll-container>
+</div>
 
-</center>
-
+<script src="javascript.js">
+/*$('#title-anv').click(function() {
+    $('#header')[0].scrollIntoView( true );
+});
+$('#title-anv').click(function() {
+    $('#header')[0].scrollIntoView( true );
+});*/
+function scrollIntoView(eleID) {
+   location.hash = '#' + eleID;
+}
+</script>
+    
 </body>
 </html>

@@ -8,17 +8,11 @@
 
 .code1 {
     border-radius: 5px;
-    height: 30px;
     line-height: 10px;
-    font-weight: 100px;
 }
 
 h1 {
     font-family: sans-serif
-}
-
-body {
-    background-color: #AAB7B8;
 }
 
 h2 {
@@ -27,18 +21,13 @@ h2 {
 
 a {
     text-decoration: underline;
-    color: white
+    color: grey;
 }
 
-
-
 p {
-    margin-top: -10px;
     font-family: "Arial", sans-serif;
     font-size: 19px;
 }
-
-
 
 .codeText1 {
     width: 90%;
@@ -46,15 +35,78 @@ p {
     margin-top: -28px;
 }
 
-
-
-
-
 .secondBody {
     text-align: left;
     width: 90%;
+    margin-left: 20px;
 }
 
 .code2 {
     border-radius: 5px;
+}
+
+.icone-bot {
+    display: flex;
+    justify-content: left;
+}
+
+span {
+    font-family: "Arial",sans-serif;
+    font-size: 19px;
+}
+
+.icone-bot-app {
+    margin-left: 1px;
+    margin-top: 17px;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.nav-div {
+    background-color: #F3F3F3;
+    width: 200px;
+    border-right-color: black;
+    border-right: solid;
+}
+
+.body-div {
+    margin-left: -8px;
+    margin-top: -16px;
+    display: flex;
+    font-family: "Arial",sans-serif;
+}
+
+.nav-ul li a{
+    display: block;
+    color: black;
+    font-family: "Arial", sans-serif;
+    text-decoration: inherit;
+}
+
+.nav-ul {
+    list-style-type: none;
+}
+
+
+.title-anv {
+    margin-left: -20px;
+}
+
+.nav-hr {
+    margin-left: -20px;
+    width: 160px;
+}
+
+.nav-a-select {
+    cursor: pointer;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+scroll-container {
+    scroll-behavior: smooth;
 }
