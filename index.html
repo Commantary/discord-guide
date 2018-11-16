@@ -14,14 +14,13 @@
 <div class="nav-div">
     <ul class="nav-ul">
         <br>
-      <li class="title-anv"><span><a id="title-anv" href="#creation-du-bot">Discord.JS Guide</a></span>
-        <hr width="120">
-        <br>
-      <li><span onclick="myFunction(#mise-en-place)"><a class="nav-a-select">Mise en place</a></span></li>
-        <hr class="nav-hr">
-      <li><span onclick="myFunction(#creation-du-bot)"><a class="nav-a-select">Création du bot</a></span></li>
-        <hr class="nav-hr">
-      <li><span onclick="myFunction(#permission)"><a class="nav-a-select">Permissions</a></span></li>
+      <li class="title-anv"><span id="title-span-nav"><a id="title-anv" href="#header">Discord.JS Guide</a></span>
+      <br>
+      <li class="li-nav"><br><span class="span-nav"><a class="nav-a-select" href="#mise-en-place">Mise en place</a></span><br></li>
+        
+      <li class="li-nav"><br><span class="span-nav"><a class="nav-a-select" href="#creation-du-bot">Création du bot</a><br></span></li>
+        
+      <li class="li-nav"><br><span class="span-nav"><a class="nav-a-select" href="#permissions">Permissions du bot</a></span><br></li>
     </ul>
 </div>
     <scroll-container>
@@ -75,7 +74,9 @@ tapez yes et pressez entrer
     <img class="token-reveal-bot" src="/images/token-reveal-bot.PNG" alt="token-not-reveal">
     <p>Ce qui nous donnez une suite de chose bizarre mais ne soyez pas perdu ! Pas besoin de comprendre ce que sa signifie il faut juste le <br>copier-coller quelque part.</p>
     <img class="token-bot" src="/images/token-bot.PNG" alt="token-reveal">
-    <h3 id="permissions-bot">Permissions du bot :</h3>
+        
+    <scroll-page><h3 id="permissions">Permissions:</h3></scroll-page>
+        
     <p>Maintenant il faut inviter le bot discord sur notre serveur discord, il y a une nouvelle fonctionnalité qui nous permer de calculer les permissions directement sur la page du bot sa ressemble a cela.</p>
     <img class="bot-permission-app" src="images/bot-permissions-app.PNG" width="700" alt="bot-permission">
     <p>Vous devez juste cliquer sur les permissions qu'il vous faut pour votre bot, pour le guide je sélectionne juste <strong>Administrateur</strong> qui résulte en un <strong>8</strong>. Pour rajouter votre bot a votre serveur discord vous devez éditer ce lien <a class="" href="https://discordapp.com/oauth2/authorize?client_id=ID_DU_BOT&scope=bot&permissions=NOMBRE_DES_PERMISSIONS">https://discordapp.com/oauth2/authorize?client_id=ID_DU_BOT&scope=bot&permissions=NOMBRE_DES_PERMISSIONS</a><br>Tel que <i>https://discordapp.com/oauth2/authorize?client_id=512981872603561984&scope=bot&permissions=8</i> qui sera le lien pour inviter mon bot, vous devriez juste mettre votre client ID et votre nombre de permissions. Simple non ? </p>
@@ -83,16 +84,16 @@ tapez yes et pressez entrer
 </scroll-container>
 </div>
 
-<script src="javascript.js">
-/*$('#title-anv').click(function() {
-    $('#header')[0].scrollIntoView( true );
-});
-$('#title-anv').click(function() {
-    $('#header')[0].scrollIntoView( true );
-});*/
-function scrollIntoView(eleID) {
-   location.hash = '#' + eleID;
+<script>
+$('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
 }
+});
 </script>
     
 </body>

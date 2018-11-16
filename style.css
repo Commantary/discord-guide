@@ -66,7 +66,7 @@ img {
 
 .nav-div {
     background-color: #F3F3F3;
-    width: 200px;
+    width: 500px;
     border-right-color: black;
     border-right: solid;
 }
@@ -91,16 +91,18 @@ img {
 
 
 .title-anv {
-    margin-left: -20px;
+    margin-left: -30px;
+    border-bottom: solid
 }
 
-.nav-hr {
-    margin-left: -20px;
+.nav-hr-title {
+    margin-left: 0px;
     width: 160px;
 }
 
 .nav-a-select {
     cursor: pointer;
+    margin-left: 10px
 }
 
 body {
@@ -110,3 +112,53 @@ body {
 scroll-container {
     scroll-behavior: smooth;
 }
+scroll-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 2em;
+}
+
+.fake-div {
+    width: 510px;
+    height: 10000px;
+    background-color: #F3F3F3;
+    border-right-color: black;
+    border-right: solid;
+}
+
+.nav-hr {
+    margin-left: -20px;
+    width: 220px;
+}
+
+
+
+.li-nav {
+    border-bottom-width: thin;
+    border-bottom-color: grey;
+    border-bottom-style: outset;
+    margin-left: -40px;
+}
+
+.li-nav:hover {
+    background-color: #D0D0D0;
+}
+
+.span-nav {
+    text-align: center;
+}
+
+
+
+#title-anv {
+    margin: auto;
+    font-size: 22px;
+}
+
+#title-span-nav {
+    text-align: center
+}
+
+
